@@ -25,13 +25,14 @@
       </div>
     </nav>
 
-    <List :블로그글="블로그글" />
+    <router-view :블로그글="블로그글"></router-view>
+    <!-- <List :블로그글="블로그글" /> -->
 
   </div>
 </template>
 
 <script>
-import BlogList from './components/List.vue';
+// import BlogList from './components/List.vue';
 import blogData from './assets/blog.js';
 
 export default {
@@ -42,7 +43,7 @@ export default {
     }
   },
   components: {
-    List: BlogList,
+
   }
 }
 </script>
