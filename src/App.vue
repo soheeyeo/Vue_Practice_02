@@ -28,8 +28,10 @@
     <router-link to="/">홈페이지</router-link>
     <router-link to="/list">리스트 페이지</router-link>
 
+    <div class="mt-4">
     <router-view :블로그글="블로그글"></router-view>
-    
+    </div>
+
     <!-- <List :블로그글="블로그글" /> -->
 
   </div>
