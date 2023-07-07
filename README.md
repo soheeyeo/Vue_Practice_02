@@ -86,3 +86,39 @@ const routes = [
 <h5>{{ blog[$route.params.id].title }}</h5>
 <p>{{ blog[$route.params.id].content }}</p>
 ```
+
+## Nested routes
+#### nested routes
+특정 페이지 내에서 또 라우트를 나누는 것. <br>
+children이라는 항목 개설 후 route 추가.<br>
+
+```tsx
+import Author from './components/Author.vue';
+import Comment from './components/Comment.vue';
+
+const routes = [
+  {
+    path : '/detail/:id',
+    component : Detail,
+    children : [
+      {
+        path : 'author',
+        component : Author
+      },
+      {
+        path : 'comment',
+        component : Comment
+      },
+    ]
+  }
+]
+```
+
+#### push 함수
+`$router.push('이동할 페이지')`로 페이지 이동 가능.<br>
+
+```tsx
+<div>
+  <h5 @click="$router.push('/detail/0')">{{ blog[0].title }}</h5>
+</div>
+```
