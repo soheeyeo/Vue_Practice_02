@@ -68,3 +68,21 @@ export default {
 ```tsx
 <router-link to="/list">이동하기</router-link>
 ```
+
+## URL 파라미터
+`:파라미터명`을 추가하여 동적 URL 파라미터 만들기. <br>
+
+```tsx
+const routes = [
+  {
+    path: '/detail/:id',
+    component: Detail,
+  },
+];
+```
+
+`$route.params.id`로 url에 있는 파라미터 가져오기<br>
+```tsx
+<h5>{{ blog[$route.params.id].title }}</h5>
+<p>{{ blog[$route.params.id].content }}</p>
+```
